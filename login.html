@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alke Wallet - Iniciar Sesión</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="bg-animated"></div>
+    
+    <div class="container">
+        <div class="row justify-content-center align-items-center min-vh-100">
+            <div class="col-md-5 col-lg-4">
+                <div class="card fade-in">
+                    <!-- Logo y Título -->
+                    <div class="text-center mb-4">
+                        <div class="mb-3">
+                            <i class="fas fa-wallet fa-3x text-primary"></i>
+                        </div>
+                        <h1 class="h3 mb-2">Alke Wallet</h1>
+                        <p class="text-secondary">Tu billetera digital del futuro</p>
+                    </div>
+                    
+                    <!-- Alert para mensajes -->
+                    <div id="loginAlert" class="d-none"></div>
+                    
+                    <!-- Formulario de Login -->
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="username" class="form-label">
+                                <i class="fas fa-user me-2"></i>Usuario
+                            </label>
+                            <input 
+                                type="text" 
+                                class="form-control" 
+                                id="username" 
+                                placeholder="Ingresa tu usuario"
+                                required
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password" class="form-label">
+                                <i class="fas fa-lock me-2"></i>Contraseña
+                            </label>
+                            <div class="position-relative">
+                                <input 
+                                    type="password" 
+                                    class="form-control" 
+                                    id="password" 
+                                    placeholder="Ingresa tu contraseña"
+                                    required
+                                >
+                                <button 
+                                    type="button" 
+                                    class="btn btn-sm position-absolute end-0 top-50 translate-middle-y me-2" 
+                                    id="togglePassword"
+                                    style="border: none; background: transparent; color: var(--text-muted);"
+                                >
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="rememberMe">
+                            <label class="form-check-label text-secondary" for="rememberMe">
+                                Recordar mis datos
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block mb-3">
+                            <i class="fas fa-sign-in-alt me-2"></i>Iniciar Sesión
+                        </button>
+                        
+                        <div class="text-center">
+                            <a href="#" class="text-primary text-decoration-none">
+                                ¿Olvidaste tu contraseña?
+                            </a>
+                        </div>
+                    </form>
+                    
+                    <!-- Información de prueba -->
+                    <div class="mt-4 p-3" style="background: var(--bg-input); border-radius: var(--radius-sm); border: 1px dashed var(--border);">
+                        <p class="text-muted mb-2 small">
+                            <i class="fas fa-info-circle me-2"></i>Credenciales de prueba:
+                        </p>
+                        <p class="font-mono small mb-1">Usuario: <span class="text-primary">admin</span></p>
+                        <p class="font-mono small mb-0">Contraseña: <span class="text-primary">12345</span></p>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <div class="text-center mt-4">
+                    <p class="text-muted small">
+                        © 2024 Alke Wallet. Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/login.js"></script>
+</body>
+</html>
